@@ -144,7 +144,7 @@ more...")
       (xml-attribute '(:foreground "#F36335"))
       (xml-tag '(:foreground "#AE1B9A"))
       (highlight-current-tag '(:background "#E8E8FF")) ; #EEF3F6 or #FFEB26
-  )
+      )
 
   (custom-theme-set-faces
    'leuven
@@ -1023,17 +1023,18 @@ more...")
 
    ))
 
-(custom-theme-set-variables 'leuven
+(custom-theme-set-variables
+ 'leuven
 
-  ;; highlight-sexp-mode.
-  '(hl-sexp-background-color "#efebe9")
+ ;; highlight-sexp-mode.
+ '(hl-sexp-background-color "#efebe9")
 
-  '(ansi-color-faces-vector
-    [default default default italic underline success warning error])
+ '(ansi-color-faces-vector
+   [default default default italic underline success warning error])
 
-  ;; Colors used in Shell mode.
-  '(ansi-color-names-vector
-    ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
+ ;; Colors used in Shell mode.
+ '(ansi-color-names-vector
+   ["black" "red3" "ForestGreen" "yellow3" "blue" "magenta3" "DeepSkyBlue" "gray50"])
  )
 
 ;;;###autoload
