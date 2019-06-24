@@ -1,4 +1,4 @@
-;;; leuven-theme.el --- Awesome Emacs color theme on white background
+;;; leuven-gray-theme.el --- Awesome Emacs color theme on white background
 
 ;; Copyright (C) 2003-2019 Free Software Foundation, Inc.
 
@@ -1059,4 +1059,4 @@ more...")
 ;; time-stamp-start: "Version: "
 ;; End:
 
-;;; leuven-theme.el ends here
+;;; leuven-gray-theme.el ends here

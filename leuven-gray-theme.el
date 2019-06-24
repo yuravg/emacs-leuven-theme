@@ -1,4 +1,4 @@
-;;; leuven-theme.el --- Awesome Emacs color theme on white background
+;;; leuven-gray-theme.el --- Awesome Emacs color theme on white background
 
 ;; Copyright (C) 2003-2019 Free Software Foundation, Inc.
 
@@ -29,7 +29,7 @@
 ;;
 ;; To use it, put the following in your Emacs configuration file:
 ;;
-;;   (load-theme 'leuven t)
+;;   (load-theme 'leuven-gray t)
 ;;
 ;; Requirements: Emacs 24+.
 ;;
@@ -40,30 +40,30 @@
 
 ;;; Options.
 
-(defgroup leuven nil
-  "Leuven theme options.
+(defgroup leuven-gray nil
+  "Leuven-gray theme options.
 The theme has to be reloaded after changing anything in this group."
   :group 'faces)
 
-(defcustom leuven-scale-outline-headlines t
+(defcustom leuven-gray-scale-outline-headlines t
   "Scale `outline' (and `org') level-1 headlines.
 This can be nil for unscaled, t for using the theme default, or a scaling number."
   :type '(choice
           (const :tag "Unscaled" nil)
           (const :tag "Default provided by theme" t)
           (number :tag "Set scaling"))
-  :group 'leuven)
+  :group 'leuven-gray)
 
-(defcustom leuven-scale-org-agenda-structure t
+(defcustom leuven-gray-scale-org-agenda-structure t
   "Scale Org agenda structure lines, like dates.
 This can be nil for unscaled, t for using the theme default, or a scaling number."
   :type '(choice
           (const :tag "Unscaled" nil)
           (const :tag "Default provided by theme" t)
           (number :tag "Set scaling"))
-  :group 'leuven)
+  :group 'leuven-gray)
 
-(defun leuven-scale-font (control default-height)
+(defun leuven-gray-scale-font (control default-height)
   "Function for splicing optional font heights into face descriptions.
 CONTROL can be a number, nil, or t.  When t, use DEFAULT-HEIGHT."
   (cond
@@ -73,7 +73,7 @@ CONTROL can be a number, nil, or t.  When t, use DEFAULT-HEIGHT."
 
 ;;; Theme Faces.
 
-(deftheme leuven
+(deftheme leuven-gray
   "Face colors with a light background.
 Basic, Font Lock, Isearch, Gnus, Message, Org mode, Diff, Ediff,
 Flyspell, Semantic, and Ansi-Color faces are included -- and much
@@ -81,7 +81,7 @@ more...")
 
 (let ((class '((class color) (min-colors 89)))
 
-      ;; Leuven generic colors.
+      ;; Leuven-gray generic colors.
       (cancel '(:slant italic :strike-through t :foreground "#A9A9A9"))
       (clock-line '(:box (:line-width 1 :color "#335EA8") :foreground "black" :background "#EEC900"))
       (code-block '(:foreground "#000088" :background "#FFFFE0"))
@@ -121,7 +121,7 @@ more...")
       (mail-unread-high '(:weight bold :foreground "#135985"))
       (marked-line '(:foreground "#AA0000" :background "#FFAAAA"))
       (match '(:weight bold :background "#FFFF00")) ; occur patterns + match in helm for files + match in Org files.
-      (ol1 `(,@(leuven-scale-font leuven-scale-outline-headlines 1.3) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
+      (ol1 `(,@(leuven-gray-scale-font leuven-gray-scale-outline-headlines 1.3) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
       (ol2 '(:height 1.0 :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
       (ol3 '(:height 1.0 :weight bold :foreground "#005522" :background "#EFFFEF"))
       (ol4 '(:height 1.0 :weight bold :slant normal :foreground "#EA6300"))
@@ -147,7 +147,7 @@ more...")
       )
 
   (custom-theme-set-faces
-   'leuven
+   'leuven-gray
    `(default ((,class (:foreground "#333333" :background "#FFFFFF"))))
    `(bold ((,class (:weight bold :foreground "black"))))
    `(bold-italic ((,class (:weight bold :slant italic :foreground "black"))))
@@ -639,14 +639,14 @@ more...")
    `(js2-warning ((,class (:underline "orange"))))
 
    ;; Org non-standard faces.
-   `(leuven-org-deadline-overdue ((,class (:foreground "#F22659"))))
-   `(leuven-org-deadline-today ((,class (:weight bold :foreground "#4F4A3D" :background "#FFFFCC"))))
-   `(leuven-org-deadline-tomorrow ((,class (:foreground "#40A80B"))))
-   `(leuven-org-deadline-future ((,class (:foreground "#40A80B"))))
-   `(leuven-gnus-unseen ((,class (:weight bold :foreground "#FC7202"))))
-   `(leuven-gnus-date ((,class (:foreground "#FF80BF"))))
-   `(leuven-gnus-size ((,class (:foreground "#8FBF60"))))
-   `(leuven-todo-items-face ((,class (:weight bold :foreground "#FF3125" :background "#FFFF88"))))
+   `(leuven-gray-org-deadline-overdue ((,class (:foreground "#F22659"))))
+   `(leuven-gray-org-deadline-today ((,class (:weight bold :foreground "#4F4A3D" :background "#FFFFCC"))))
+   `(leuven-gray-org-deadline-tomorrow ((,class (:foreground "#40A80B"))))
+   `(leuven-gray-org-deadline-future ((,class (:foreground "#40A80B"))))
+   `(leuven-gray-gnus-unseen ((,class (:weight bold :foreground "#FC7202"))))
+   `(leuven-gray-gnus-date ((,class (:foreground "#FF80BF"))))
+   `(leuven-gray-gnus-size ((,class (:foreground "#8FBF60"))))
+   `(leuven-gray-todo-items-face ((,class (:weight bold :foreground "#FF3125" :background "#FFFF88"))))
 
    `(light-symbol-face ((,class (:background "#FFFFA0"))))
    `(linum ((,class (:foreground "#9A9A9A" :background "#EDEDED"))))
@@ -728,16 +728,16 @@ more...")
    `(org-agenda-clocking ((,class (:foreground "black" :background "#EEC900"))))
    `(org-agenda-column-dateline ((,class ,column)))
    `(org-agenda-current-time ((,class (:underline t :foreground "#1662AF"))))
-   `(org-agenda-date ((,class (,@(leuven-scale-font leuven-scale-org-agenda-structure 1.6) :weight bold :foreground "#1662AF"))))
-   `(org-agenda-date-today ((,class (,@(leuven-scale-font leuven-scale-org-agenda-structure 1.6) :weight bold :foreground "#4F4A3D" :background "#FFFFCC"))))
-   `(org-agenda-date-weekend ((,class (,@(leuven-scale-font leuven-scale-org-agenda-structure 1.6) :weight bold :foreground "#4E4E4E"))))
+   `(org-agenda-date ((,class (,@(leuven-gray-scale-font leuven-gray-scale-org-agenda-structure 1.6) :weight bold :foreground "#1662AF"))))
+   `(org-agenda-date-today ((,class (,@(leuven-gray-scale-font leuven-gray-scale-org-agenda-structure 1.6) :weight bold :foreground "#4F4A3D" :background "#FFFFCC"))))
+   `(org-agenda-date-weekend ((,class (,@(leuven-gray-scale-font leuven-gray-scale-org-agenda-structure 1.6) :weight bold :foreground "#4E4E4E"))))
    `(org-agenda-diary ((,class (:weight bold :foreground "green4" :background "light blue"))))
    `(org-agenda-dimmed-todo-face ((,class (:foreground "gold2"))))
    `(org-agenda-done ((,class (:foreground "#555555"))))
    `(org-agenda-filter-category ((,class (:weight bold :foreground "orange"))))
    `(org-agenda-filter-tags ((,class (:weight bold :foreground "orange"))))
    `(org-agenda-restriction-lock ((,class (:background "#E77D63"))))
-   `(org-agenda-structure ((,class (,@(leuven-scale-font leuven-scale-org-agenda-structure 1.6) :weight bold :foreground "#1F8DD6"))))
+   `(org-agenda-structure ((,class (,@(leuven-gray-scale-font leuven-gray-scale-org-agenda-structure 1.6) :weight bold :foreground "#1F8DD6"))))
    `(org-archived ((,class (:foreground "gray70"))))
    `(org-beamer-tag ((,class (:box (:line-width 1 :color "#FABC18") :foreground "#2C2C2C" :background "#FFF8D0"))))
    `(org-block ((,class ,code-block)))
@@ -1024,7 +1024,7 @@ more...")
    ))
 
 (custom-theme-set-variables
- 'leuven
+ 'leuven-gray
 
  ;; highlight-sexp-mode.
  '(hl-sexp-background-color "#efebe9")
@@ -1050,7 +1050,7 @@ more...")
   (message "To stay up-to-date, you should better install and use leuven-theme from MELPA.")
   (sit-for 2))
 
-(provide-theme 'leuven)
+(provide-theme 'leuven-gray)
 
 ;; This is for the sake of Emacs.
 ;; Local Variables:
@@ -1060,4 +1060,4 @@ more...")
 ;; time-stamp-start: "Version: "
 ;; End:
 
-;;; leuven-theme.el ends here
+;;; leuven-gray-theme.el ends here
