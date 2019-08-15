@@ -260,6 +260,7 @@ more...")
 
    ;; Magit
    `(magit-log-author ((,class (:foreground "gray40"))))
+   `(magit-section-highlight ((,class (:background "lavender"))))
    `(magit-branch-current ((,class (:underline t :foreground "dark green" :weight bold :background "#ddffdd" :box (:line-width 1)))))
    `(magit-branch-local ((,class (:underline t :foreground "blue4" :weight bold :background "#E5F4FB"))))
    `(magit-branch-remote ((,class (:underline t :foreground "IndianRed4" :weight bold :background "khaki1"))))
