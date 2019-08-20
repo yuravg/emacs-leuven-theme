@@ -276,6 +276,11 @@ more...")
    `(magit-diff-removed ((,class (:foreground "#AA2222" :background "#FFDDDD"))))
    `(magit-diff-removed-highlight ((,class (:foreground "#AA2222" :backgroun "#FFDDDD"))))
 
+   ;; Git-timemachine
+   `(git-timemachine-commit ((,class (:foreground "blue4" :weight normal))))
+   `(git-timemachine-minibuffer-author-face ((,class (:foreground "gray35"))))
+   `(git-timemachine-minibuffer-detail-face ((,class (:foreground "navy" :weight normal))))
+
    ;; Completion buffer
    `(completions-common-part ((,class (:foreground "blue4"))))
    `(completions-first-difference ((,class (:foreground "black" :weight bold))))
