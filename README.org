@@ -92,6 +92,11 @@ Polge.
 It surely will be improved over time, but this is a major first step into the
 right direction.  A big thanks to him!
 
+** NEW! Gray version
+
+#+ATTR_HTML: :width 640
+[[./images/leuven-gray-theme.png]]
+
 * Install it
 
 Though Leuven-theme has been added in *Emacs 24.4* (October 2014), you can get
@@ -156,6 +161,24 @@ To use the dark theme with [[https://github.com/jwiegley/use-package][use-packag
 (use-package leuven-theme
   :config
   (load-theme 'leuven-dark t))
+#+end_src
+
+Restart Emacs.
+
+** Gray-theme
+
+To load the gray theme, add the following to your =.emacs= file:
+
+#+begin_src emacs-lisp
+(load-theme 'leuven-gray t)
+#+end_src
+
+To use the gray theme with [[https://github.com/jwiegley/use-package][use-package]], use the following:
+
+#+begin_src emacs-lisp
+(use-package leuven-theme
+  :config
+  (load-theme 'leuven-gray t))
 #+end_src
 
 Restart Emacs.
