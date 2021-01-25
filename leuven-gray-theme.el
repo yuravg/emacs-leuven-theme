@@ -4,7 +4,7 @@
 
 ;; Author: Fabrice Niessen <(concat "fniessen" at-sign "pirilampo.org")>
 ;; URL: https://github.com/fniessen/emacs-leuven-theme
-;; Version: 20200515.1210
+;; Version: 20210125.1427
 ;; Keywords: color theme
 
 ;; This file is part of GNU Emacs.
@@ -83,6 +83,7 @@ more...")
 
       ;; Leuven-gray generic colors
       (code-block '((,class (color))))
+      (code-block '(:background "#FAFAFA" :extend t))
       (code-inline '(:foreground "black"))
 
       (completion-selected-candidate '(:weight bold :foreground "white" :background "#0052A4"))
