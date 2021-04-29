@@ -4,7 +4,7 @@
 
 ;; Author: Fabrice Niessen <(concat "fniessen" at-sign "pirilampo.org")>
 ;; URL: https://github.com/fniessen/emacs-leuven-theme
-;; Version: 20210208.1018
+;; Version: 20210429.1126
 ;; Keywords: color theme
 
 ;; This file is part of GNU Emacs.
@@ -361,6 +361,21 @@ more...")
    `(info-variable-ref-item ((,class (:foreground "firebrick" :background "gray94"))))
    `(info-xref ((,class (:inherit link))))
    `(info-xref-visited ((,class (:inherit link-visited info-xref))))
+
+   ;; Plain Old Documentation format of Perl
+   `(pod-mode-head1-face ((,class ,ol2)))
+   `(pod-mode-head1-text-face ((,class ,ol2)))
+   `(pod-mode-head2-face ((,class ,ol3)))
+   `(pod-mode-head2-text-face ((,class ,ol3)))
+   `(pod-mode-head3-face ((,class ,ol4)))
+   `(pod-mode-head3-text-face ((,class ,ol4)))
+   `(pod-mode-head4-face ((,class ,ol5)))
+   `(pod-mode-head4-text-face ((,class ,ol5)))
+   `(pod-mode-verbatim-face ((,class (:inherit font-lock-constant-face))))
+   `(pod-mode-string-face ((,class (:inherit font-lock-doc-face))))
+   `(pod-mode-alternative-formatting-code-face ((,class (:inherit font-lock-variable-name-face))))
+   `(pod-mode-command-face ((,class (:inherit font-lock-function-name-face))))
+   `(pod-mode-command-text-face ((,class (:inherit font-lock-function-name-face))))
 
    `(manage-minor-mode-face-active ((,class (:foreground "blue4" :background nil :weight bold))))
    ))
