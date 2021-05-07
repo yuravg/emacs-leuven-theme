@@ -4,7 +4,7 @@
 
 ;; Author: Fabrice Niessen <(concat "fniessen" at-sign "pirilampo.org")>
 ;; URL: https://github.com/fniessen/emacs-leuven-theme
-;; Version: 20210429.1126
+;; Version: 20210507.0914
 ;; Keywords: color theme
 
 ;; This file is part of GNU Emacs.
@@ -376,6 +376,7 @@ more...")
    `(pod-mode-alternative-formatting-code-face ((,class (:inherit font-lock-variable-name-face))))
    `(pod-mode-command-face ((,class (:inherit font-lock-function-name-face))))
    `(pod-mode-command-text-face ((,class (:inherit font-lock-function-name-face))))
+   `(pod-mode-formatting-code-character-face ((,class (:inherit font-lock-comment-face :slant normal))))
 
    `(manage-minor-mode-face-active ((,class (:foreground "blue4" :background nil :weight bold))))
    ))
