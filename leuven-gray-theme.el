@@ -4,7 +4,7 @@
 
 ;; Author: Fabrice Niessen <(concat "fniessen" at-sign "pirilampo.org")>
 ;; URL: https://github.com/fniessen/emacs-leuven-theme
-;; Version: 20210507.0914
+;; Version: 20210512.1447
 ;; Keywords: color theme
 
 ;; This file is part of GNU Emacs.
@@ -302,8 +302,8 @@ more...")
 
    ;; cperl
    `(cperl-nonoverridable-face ((,class (:foreground "IndianRed4"))))
-   `(cperl-hash-face ((,class (:foreground "IndianRed3" :background "gray93"))))
-   `(cperl-array-face ((,class (:foreground "blue1" :background "gray95"))))
+   `(cperl-hash-face ((,class (:foreground "DodgerBlue3" :background "gray95"))))
+   `(cperl-array-face ((,class (:foreground "blue1" :background "gray94"))))
 
    ;; Hexl
    ;; Default: :inherit header-line: foreground: gray20, background: gray90
